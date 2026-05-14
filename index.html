@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Kuliner - Muhammad Fahri Al Fauzi</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#1c1c1c',     // Charcoal black
+                            orange: '#e65c00',   // Fire orange
+                            light: '#f9f6f0',    // Cream/Dough
+                            gray: '#4a4a4a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for an elegant touch */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f9f6f0; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e65c00; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cc5200; 
+        }
+        .bg-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e65c00' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-dark bg-brand-light antialiased selection:bg-brand-orange selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-brand-dark/95 backdrop-blur-sm text-white shadow-lg transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fas fa-hat-chef text-brand-orange text-2xl"></i>
+                    <span class="font-serif font-bold text-xl tracking-wider">FAHRI AL FAUZI</span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
+                    <a href="#home" class="hover:text-brand-orange transition-colors">Beranda</a>
+                    <a href="#about" class="hover:text-brand-orange transition-colors">Profil</a>
+                    <a href="#experience" class="hover:text-brand-orange transition-colors">Pengalaman</a>
+                    <a href="#skills" class="hover:text-brand-orange transition-colors">Keahlian</a>
+                    <a href="#contact" class="hover:text-brand-orange transition-colors">Kontak</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-orange focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-t border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#home" class="block px-3 py-2 text-base font-medium hover:text-brand-orange">Beranda</a>
+                <a href="#about" class="block px-3 py-2 text-base font-medium hover:text-brand-orange">Profil</a>
+                <a href="#experience" class="block px-3 py-2 text-base font-medium hover:text-brand-orange">Pengalaman</a>
+                <a href="#skills" class="block px-3 py-2 text-base font-medium hover:text-brand-orange">Keahlian</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium hover:text-brand-orange">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center bg-brand-dark overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=2070&auto=format&fit=crop" alt="" class="w-full h-full object-cover opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-brand-dark"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <span class="block text-brand-orange text-sm md:text-base tracking-[0.3em] uppercase mb-4 font-semibold">Portofolio Profesional</span>
+            <h1 class="text-5xl md:text-7xl font-serif text-white font-bold mb-6 leading-tight">
+                Muhammad Fahri <br>
+                <span class="text-brand-orange italic">Al Fauzi</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
+                Seorang profesional kuliner yang berdedikasi tinggi, berfokus pada kualitas rasa, presentasi, dan efisiensi dapur operasional.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#experience" class="px-8 py-3 bg-brand-orange text-white font-medium rounded-sm hover:bg-orange-600 transition-colors duration-300 shadow-lg shadow-brand-orange/30">
+                    Lihat Pengalaman
+                </a>
+                <a href="#contact" class="px-8 py-3 bg-transparent border border-white text-white font-medium rounded-sm hover:bg-white hover:text-brand-dark transition-colors duration-300">
+                    Hubungi Saya
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <!-- Image Container -->
+                <div class="w-full lg:w-5/12 relative">
+                    <div class="absolute -inset-4 border-2 border-brand-orange/30 rounded-t-full rounded-b-lg transform -rotate-3"></div>
+                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=1968&auto=format&fit=crop" alt="" class="relative w-full h-[500px] object-cover rounded-t-full rounded-b-lg shadow-2xl z-10">
+                    <div class="absolute bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl z-20 hidden md:block">
+                        <p class="font-serif text-brand-orange font-bold text-2xl">100%</p>
+                        <p class="text-xs text-brand-gray font-bold uppercase tracking-wider">Komitmen</p>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="w-full lg:w-7/12">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="h-[1px] w-12 bg-brand-orange"></div>
+                        <h2 class="text-brand-orange uppercase tracking-widest text-sm font-bold">Tentang Saya</h2>
+                    </div>
+                    <h3 class="text-4xl md:text-5xl font-serif font-bold text-brand-dark mb-6">Menciptakan Karya Nyata dengan <span class="italic text-brand-orange">Loyalitas</span></h3>
+                    <p class="text-brand-gray text-lg leading-relaxed mb-6">
+                        Saya adalah seseorang yang berkomitmen tinggi untuk mencapai hasil yang maksimal dalam setiap pekerjaan saya. Dengan pengalaman yang saya miliki di industri F&B dan *Hospitality*, saya terbiasa bekerja dengan standar operasional yang ketat.
+                    </p>
+                    <p class="text-brand-gray text-lg leading-relaxed mb-8">
+                        Saya memiliki kemampuan untuk melakukan pekerjaan dengan loyalitas, tepat sasaran, baik, jujur, dan efisien. Saya mampu bekerja di bawah tekanan dapur yang dinamis, dengan tekad kuat untuk meraih kesuksesan di usia muda.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mt-8 border-t border-gray-200 pt-8">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-orange/10 p-3 rounded-lg text-brand-orange">
+                                <i class="fas fa-fire-burner text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-dark">Keahlian Dapur</h4>
+                                <p class="text-sm text-brand-gray">Persiapan, memasak, & plating.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-orange/10 p-3 rounded-lg text-brand-orange">
+                                <i class="fas fa-users text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-dark">Kerja Sama Tim</h4>
+                                <p class="text-sm text-brand-gray">Solid berkolaborasi dalam tekanan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Menu Style) -->
+    <section id="experience" class="py-24 bg-brand-dark text-white relative">
+        <!-- Decoration -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-orange opacity-5 blur-[100px] rounded-full"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-white opacity-5 blur-[100px] rounded-full"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-orange uppercase tracking-widest text-sm font-bold mb-3">Jejak Karir</h2>
+                <h3 class="text-4xl md:text-5xl font-serif font-bold text-white">Pengalaman <span class="italic font-light">Profesional</span></h3>
+                <div class="w-24 h-1 bg-brand-orange mx-auto mt-6"></div>
+            </div>
+
+            <!-- Timeline/Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Experience Card 1 -->
+                <div class="bg-[#2a2a2a] p-8 rounded-xl border border-gray-800 hover:border-brand-orange transition-colors duration-300 group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="text-2xl font-serif font-bold text-white group-hover:text-brand-orange transition-colors">Cook</h4>
+                            <p class="text-brand-orange font-medium mt-1">Go Steak Lengkong</p>
+                        </div>
+                        <div class="bg-brand-dark p-3 rounded-full text-brand-orange">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-400 mt-6 list-disc list-inside text-sm leading-relaxed">
+                        <li>Menyiapkan bahan masakan (memilih dan memotong daging sesuai menu).</li>
+                        <li>Memastikan ketersediaan dan kebersihan <i>pots and pans</i> sebelum operasional.</li>
+                        <li>Memasak steak sesuai dengan <i>Standard Operating Procedure</i> (SOP).</li>
+                        <li>Melakukan <i>plating</i> menu yang sudah matang dengan standar estetika.</li>
+                        <li><i>Quality Control</i> masakan, memastikan tidak ada kontaminasi sebelum dihidangkan.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience Card 2 -->
+                <div class="bg-[#2a2a2a] p-8 rounded-xl border border-gray-800 hover:border-brand-orange transition-colors duration-300 group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="text-2xl font-serif font-bold text-white group-hover:text-brand-orange transition-colors">Cook Helper</h4>
+                            <p class="text-brand-orange font-medium mt-1">Simcha Lengkong</p>
+                        </div>
+                        <div class="bg-brand-dark p-3 rounded-full text-brand-orange">
+                            <i class="fas fa-knife-kitchen"></i>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-400 mt-6 list-disc list-inside text-sm leading-relaxed">
+                        <li>Membersihkan bahan makanan dan memotong sayuran serta daging.</li>
+                        <li>Menyiapkan bumbu-bumbu dapur sesuai porsi memasak.</li>
+                        <li>Membantu *Cook* utama dalam persiapan operasional harian.</li>
+                        <li>Bertanggung jawab menata, mencuci, dan merawat <i>pots and pans</i> paska penggunaan.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience Card 3 -->
+                <div class="bg-[#2a2a2a] p-8 rounded-xl border border-gray-800 hover:border-brand-orange transition-colors duration-300 group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="text-2xl font-serif font-bold text-white group-hover:text-brand-orange transition-colors">Cook</h4>
+                            <p class="text-brand-orange font-medium mt-1">Eighteen Coffee Bandung</p>
+                        </div>
+                        <div class="bg-brand-dark p-3 rounded-full text-brand-orange">
+                            <i class="fas fa-mug-hot"></i>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-400 mt-6 list-disc list-inside text-sm leading-relaxed">
+                        <li>Melakukan <i>prepare</i> bahan baku harian dan bahan yang <i>sold out</i>.</li>
+                        <li>Membuat dan memasak produk pesanan pelanggan sesuai SOP.</li>
+                        <li>Memasak makanan staf/karyawan restoran.</li>
+                        <li>Melakukan pengecekan akhir pada masakan untuk meminimalisir komplain dan menjaga kualitas.</li>
+                    </ul>
+                </div>
+
+                <!-- Experience Card 4 -->
+                <div class="bg-[#2a2a2a] p-8 rounded-xl border border-gray-800 hover:border-brand-orange transition-colors duration-300 group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h4 class="text-2xl font-serif font-bold text-white group-hover:text-brand-orange transition-colors">Housekeeping</h4>
+                            <p class="text-brand-orange font-medium mt-1">Image Hotel</p>
+                        </div>
+                        <div class="bg-brand-dark p-3 rounded-full text-brand-orange">
+                            <i class="fas fa-broom"></i>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-400 mt-6 list-disc list-inside text-sm leading-relaxed">
+                        <li>Membersihkan area publik hotel (koridor, lobi, dan area lain).</li>
+                        <li>Berkoordinasi dengan resepsionis terkait status kamar (isi/kosong).</li>
+                        <li><i>Make-up room</i> paska <i>check-out</i> (membuang sampah, mengganti sprei/selimut/sarung bantal).</li>
+                        <li>Membersihkan toilet kamar dan melengkapi <i>amenities</i> tamu.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Education -->
+    <section id="skills" class="py-24 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <!-- Skills Column -->
+                <div>
+                    <h2 class="text-brand-orange uppercase tracking-widest text-sm font-bold mb-3">Kemampuan</h2>
+                    <h3 class="text-4xl font-serif font-bold text-brand-dark mb-8">Keahlian <span class="italic font-light">Kunci</span></h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Skill 1 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold text-brand-dark uppercase text-sm tracking-wider">Memasak (Cooking Skills)</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-brand-orange h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 2 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold text-brand-dark uppercase text-sm tracking-wider">Kerja Sama Tim (Teamwork)</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-brand-orange h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 3 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold text-brand-dark uppercase text-sm tracking-wider">Manajemen Waktu / Diandalkan</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-brand-orange h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <!-- Skill 4 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-bold text-brand-dark uppercase text-sm tracking-wider">Loyalitas & Etos Kerja</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-brand-orange h-2 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Column -->
+                <div>
+                    <h2 class="text-brand-orange uppercase tracking-widest text-sm font-bold mb-3">Latar Belakang</h2>
+                    <h3 class="text-4xl font-serif font-bold text-brand-dark mb-8">Pendidikan <span class="italic font-light">Terakhir</span></h3>
+                    
+                    <div class="relative pl-8 border-l-2 border-brand-orange/30 space-y-8">
+                        <div class="relative">
+                            <!-- Timeline Dot -->
+                            <div class="absolute -left-[41px] top-1 w-5 h-5 bg-brand-light border-4 border-brand-orange rounded-full"></div>
+                            
+                            <span class="inline-block px-3 py-1 bg-brand-dark text-white text-xs font-bold rounded mb-3">2021 - 2023</span>
+                            <h4 class="text-2xl font-serif font-bold text-brand-dark">SMA Al Falah Dago</h4>
+                            <p class="text-brand-orange font-medium mb-2">Bandung</p>
+                            <p class="text-brand-gray text-sm">Menyelesaikan pendidikan menengah atas dengan baik, membangun disiplin, serta fondasi karakter untuk terjun ke dunia profesional.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <section id="contact" class="bg-brand-dark text-center py-20 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4">
+            <i class="fas fa-concierge-bell text-5xl text-brand-orange mb-6"></i>
+            <h2 class="text-4xl font-serif font-bold text-white mb-6">Siap Memberikan Rasa <br><span class="italic font-light">Terbaik di Dapur Anda?</span></h2>
+            <p class="text-gray-400 mb-10 max-w-2xl mx-auto">
+                Tertarik untuk bekerja sama atau merekrut saya sebagai bagian dari tim kuliner Anda? Jangan ragu untuk menghubungi saya melalui kontak di bawah ini.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-16">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/6282189944525" target="_blank" class="flex items-center gap-3 bg-[#25D366] hover:bg-[#1ebd5a] text-white px-8 py-4 rounded-sm transition-transform hover:-translate-y-1 duration-300 w-full sm:w-auto justify-center font-bold">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>0821-8994-4525</span>
+                </a>
+                <!-- Email -->
+                <a href="mailto:alfauziii19@gmail.com" class="flex items-center gap-3 bg-white hover:bg-gray-100 text-brand-dark px-8 py-4 rounded-sm transition-transform hover:-translate-y-1 duration-300 w-full sm:w-auto justify-center font-bold border border-transparent">
+                    <i class="fas fa-envelope text-brand-orange text-2xl"></i>
+                    <span>alfauziii19@gmail.com</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-8 mt-8">
+            <p class="text-gray-500 text-sm">
+                &copy; <script>document.write(new Date().getFullYear())</script> Muhammad Fahri Al Fauzi. All rights reserved.
+            </p>
+        </div>
+    </section>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
